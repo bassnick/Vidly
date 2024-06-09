@@ -9,6 +9,7 @@ namespace Vidly
         {
         }
 
+        public DbSet<MembershipType> MembershipTypes { get; set; }
 
         public DbSet<Customer> Customers { get; set; }
 
