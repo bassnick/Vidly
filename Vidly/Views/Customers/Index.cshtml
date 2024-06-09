@@ -1,0 +1,32 @@
+﻿@model List<Vidly.Models.Customer>
+@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+
+@if (Model.Count == 0)
+{
+    <text>None customer.</text>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Membership Type</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(customer.Name, "Detail", "Customers", new { Id = customer.Id }, null)</td>
+                <td>@customer.MembershipType.DiscountRate%</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
