@@ -6,10 +6,18 @@
 
 <h2>Movies</h2>
 
-    <ul>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
         @foreach (var movie in Model)
         {
-            <li>@movie.Name</li>
+            <tr><td>@movie.Name</td></tr>
         }
-    </ul>
+    </tbody>
+</table>
+
 
