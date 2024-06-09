@@ -26,18 +26,13 @@ namespace Vidly.Controllers
         public ActionResult Index()
         {
             var customers = _context.Customers.Include(c => c.MembershipType).ToList();
-            /*var customers = new List<Customer>
-            {
-                new Customer { Id = 1, Name = "John Smith" },
-                new Customer { Id = 2, Name = "Mary Williams" }
-            };
-            */
+
             return View(customers);
         }
 
         public ActionResult Detail(int id)
         {
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.Include(x => x.MembershipType).SingleOrDefault(c => c.Id == id);
             
             if (customer == null)
                 return HttpNotFound();
