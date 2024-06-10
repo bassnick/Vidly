@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -30,8 +31,28 @@ namespace Vidly.Controllers
             return View(movies);
         }
 
+        [HttpPost]
         public ActionResult Save(Movie movie)
         {
+            /*
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    var viewModel = new MovieFormViewModel
+                    {
+                        Movie = movie,
+                        Genres = _context.Genres.ToList()
+                    };
+
+                    return View("MovieForm", viewModel);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }*/
+            
             if (movie.Id == 0)
             {
                 movie.DateAdded = DateTime.Now;
@@ -46,7 +67,6 @@ namespace Vidly.Controllers
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.NumberInStock = movie.NumberInStock;
             }
-
             _context.SaveChanges();
 
             return RedirectToAction("Index", "Movies");

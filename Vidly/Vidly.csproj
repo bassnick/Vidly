@@ -185,10 +185,15 @@
     <Compile Include="Migrations\202406101427529_MovieDatesAllowsNull.Designer.cs">
       <DependentUpon>202406101427529_MovieDatesAllowsNull.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202406101534323_genreRequired.cs" />
+    <Compile Include="Migrations\202406101534323_genreRequired.Designer.cs">
+      <DependentUpon>202406101534323_genreRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\VidlyDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -328,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202406101427529_MovieDatesAllowsNull.resx">
       <DependentUpon>202406101427529_MovieDatesAllowsNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406101534323_genreRequired.resx">
+      <DependentUpon>202406101534323_genreRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
