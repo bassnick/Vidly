@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Routing;  
 using Vidly.Models;
 
 namespace Vidly.Controllers.Api
@@ -17,7 +18,7 @@ namespace Vidly.Controllers.Api
             _context = new VidlyDbContext();
         }
 
-        // GET api/<controller>
+        // GET api/customers
         public IEnumerable<Customer> Get()
         {
             var customers = _context.Customers.ToList();
