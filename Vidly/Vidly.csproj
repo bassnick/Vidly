@@ -181,6 +181,10 @@
     <Compile Include="Migrations\202406101352200_GenreChange.Designer.cs">
       <DependentUpon>202406101352200_GenreChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202406101427529_MovieDatesAllowsNull.cs" />
+    <Compile Include="Migrations\202406101427529_MovieDatesAllowsNull.Designer.cs">
+      <DependentUpon>202406101427529_MovieDatesAllowsNull.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -321,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202406101352200_GenreChange.resx">
       <DependentUpon>202406101352200_GenreChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406101427529_MovieDatesAllowsNull.resx">
+      <DependentUpon>202406101427529_MovieDatesAllowsNull.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
