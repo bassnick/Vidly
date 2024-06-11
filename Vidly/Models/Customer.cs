@@ -19,7 +19,7 @@ namespace Vidly.Models
         [Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
 
-        [Min18YearsIfAMember]
+        // [Min18YearsIfAMember] nefunguje u API, protože se nevaliduje při PUT a POST requestech
         public DateTime? Birthdate { get; set; }
     }
 }
